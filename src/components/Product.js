@@ -3,7 +3,7 @@ import React from 'react'
 function Product( props) {
     debugger;
     console.log(props);
-    //const { product } = props;
+    const { product } = props;
     return (
         <div>
             <img src="./images/peproni.png" alt="pizza-type-icon" />
