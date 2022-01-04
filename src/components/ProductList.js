@@ -23,13 +23,9 @@ function ProductList() {
     
     useEffect(()=>{
         fetch('/api/products')  // fetch return a promise
-        .then(response => {     //response is received in the form of stream which needs to be convertedinto Json Onjects, which also returns a promise
-            //console.log(response);
-            return response.json(); 
-            }) 
-        .then(productList => {
-            console.log(productList);
-            setProductList(productList); 
+        .then(response => response.json())     //response is received in the form of stream which needs to be convertedinto Json Onjects, which also returns a promise
+        .then(allProducts => {
+            setProductList(allProducts); 
         });
     }, []);
 

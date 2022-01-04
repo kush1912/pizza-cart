@@ -7,6 +7,7 @@ import Home from './pages/Home'
 import Navigation from './components/Navigation'
 import Products from './pages/Products'
 import Cart from './pages/Cart'
+import ProductDetails from './pages/ProductDetails'
 
 export default function App() {
     return (
@@ -17,8 +18,9 @@ export default function App() {
                 
                 <Routes>  
                     <Route path="/" element={<Home/>} exact></Route>
-                    <Route path="/products" element={<Products/>}></Route>
+                    <Route path="/products" exact element={<Products/>}></Route>
                     <Route path="/cart" element={<Cart/>}></Route>
+                    <Route path="/products/:_id" element={<ProductDetails/>}></Route>
                 </Routes>
             </Router>
         </>
