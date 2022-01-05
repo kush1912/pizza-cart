@@ -5,23 +5,39 @@ import {BrowserRouter as Router,Routes, Route } from 'react-router-dom' // All a
 
 import Home from './pages/Home'
 import Navigation from './components/Navigation'
-import Products from './pages/Products'
+// import Products from './pages/Products'
 import Cart from './pages/Cart'
 import ProductDetails from './pages/ProductDetails'
+import { CartContext } from './pages/CartContext'
+import {useState, useEffect } from 'react'
+import ProductList from './components/ProductList'
+
 
 export default function App() {
+const [cart, setCart] = useState({});
+useEffect(()=>{
+    //fetching the data from localStorage
+    const cart = window.localStorage.getItem('cart');
+    setCart(JSON.parse(cart));
+},[])
+
+useEffect(()=>{
+    window.localStorage.setItem('cart',JSON.stringify(cart));
+},[cart]); //this time we are passing cart in the dependecny array cause we want to monitor the changes in the cart. 
+
     return (
-        
         <>
             <Router>
-                <Navigation/>
-                
-                <Routes>  
-                    <Route path="/" element={<Home/>} exact></Route>
-                    <Route path="/products" exact element={<Products/>}></Route>
-                    <Route path="/cart" element={<Cart/>}></Route>
-                    <Route path="/products/:_id" element={<ProductDetails/>}></Route>
-                </Routes>
+                <CartContext.Provider value={{cart,setCart}}>
+                    <Navigation/>
+                    
+                    <Routes>  
+                        <Route path="/" element={<Home/>} exact></Route>
+                        <Route path="/products" exact element={<ProductList/>}></Route>
+                        <Route path="/cart" element={<Cart/>}></Route>
+                        <Route path="/products/:_id" element={<ProductDetails/>}></Route>
+                    </Routes>
+                </CartContext.Provider>
             </Router>
         </>
     )
@@ -53,3 +69,6 @@ Root Component
 <Link to="/about">About</Link> */
 /* Routes array same as in Angular in routing module.ts file */
 
+/*
+cartContext - value prop is passed and is wrapped at the parent level and will be available to all the child components.
+ */

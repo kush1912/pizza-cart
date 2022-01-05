@@ -2,14 +2,14 @@ import React from 'react'
 
 import {useState,useEffect} from 'react'
 
-import {useParams,useHistory} from 'react-router-dom'
+import {useParams,useNavigate } from 'react-router-dom'
 
 function ProductDetails() {
 
     const [product, setProduct]=useState({});
     const params = useParams();
     //console.log(params);
-    const history = useHistory();
+    const navigate = useNavigate();
     useEffect(() => {
         fetch(`/api/products/${params._id}`)
         .then(response=> response.json())
@@ -18,7 +18,7 @@ function ProductDetails() {
 
     return (
         <div className="container mx-auto mt-12">
-            <button className="mb-12 font-bold" onClick={()=>{history.goBack()}}>Back</button>
+            <button className="mb-12 font-bold" onClick={()=>{navigate(`/`)}}>Back</button>
             <div className="flex">
                 <img src={product.image} alt="pizza-details-icon" />
                 <div>
