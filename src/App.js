@@ -5,7 +5,6 @@ import {BrowserRouter as Router,Routes, Route } from 'react-router-dom' // All a
 
 import Home from './pages/Home'
 import Navigation from './components/Navigation'
-// import Products from './pages/Products'
 import Cart from './pages/Cart'
 import ProductDetails from './pages/ProductDetails'
 import { CartContext } from './pages/CartContext'
