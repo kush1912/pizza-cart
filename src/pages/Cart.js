@@ -3,13 +3,14 @@ import { CartContext } from './CartContext'
 
 export default function Cart() {
     let grandTotal=0;
+    //Sharing the data through ContextAPI
     const {cart,setCart} = useContext(CartContext);
+    
     const [products, setProducts] =useState([]);
     const [priceFetched, togglePriceFetched]=useState(false);
+    
     useEffect(() => {
-       if(!cart.items){
-           return;
-       }
+       if(!cart.items) return;
        if(priceFetched) return;
        fetch('/api/products/cart-items',{
            method:'POST',
@@ -54,13 +55,13 @@ export default function Cart() {
         const _cart = {...cart};
         const qty = _cart.items[productId];
         delete _cart.items[productId]; //Delete keyword is used to delete property from an object.
-        _cart.totalItems=qty;
+        _cart.totalItems-=qty;
         setCart(_cart);
         setProducts(products.filter((product)=>product._id!==productId))  //filter always return true/false
     }
 
     const handleOrderNow = ()=>{
-        window.alert("Order Placed Succesfullly!");
+        window.alert(`Order Placed Succesfullly of total amount: ${grandTotal}`);
         setProducts([]);
         setCart([]);
     }

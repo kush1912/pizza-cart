@@ -3,6 +3,7 @@ import React from 'react'
 import {useState,useEffect} from 'react'
 
 import {useParams,useNavigate } from 'react-router-dom'
+import {addToCart} from '../components/Product';
 
 function ProductDetails() {
 
@@ -25,7 +26,7 @@ function ProductDetails() {
                     <h1 className="text-xl font-bold">{product.name}</h1>
                     <div className="text-md">{product.size}</div>
                     <div className="font-bold mt-2">Rs. {product.price}</div>
-                    <button className="bg-yellow-500 py-1 px-8 rounded-full font-bol mt-4">Add to Cart</button>
+                    <button  className="bg-yellow-500 py-1 px-8 rounded-full font-bol mt-4">Add to Cart</button>
                 </div>
             </div>
         </div>
