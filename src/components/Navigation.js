@@ -14,7 +14,7 @@ export default function Navigation() {
 
     const {cart } =useContext(CartContext);
 
-    return (
+    return (     
         <>
             <nav className="container mx-auto flex items-center justify-between py-4">
                     <Link to="/">
@@ -26,7 +26,7 @@ export default function Navigation() {
                     <li className='ml-6'>
                         <Link to="/cart">
                             <div style={cartStyle}>
-                                <span>{cart.totalItems}</span>
+                                <span>{cart.totalItems? cart.totalItems:0}</span>
                                 <img className='ml-2' src='./images/cart.png' alt="cart-logo"></img>
                             </div>
                         </Link>

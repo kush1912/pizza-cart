@@ -10,18 +10,18 @@ import ProductDetails from './pages/ProductDetails'
 import { CartContext } from './pages/CartContext'
 import {useState, useEffect } from 'react'
 import ProductList from './components/ProductList'
-
+import { getCart,storeCart } from './helper'
 
 export default function App() {
 const [cart, setCart] = useState({});
 useEffect(()=>{
-    //fetching the data from localStorage
-    const cart = window.localStorage.getItem('cart');
-    setCart(JSON.parse(cart));
+    getCart().then(cart =>{
+        setCart(JSON.parse(cart));
+    }) ;
 },[])
 
 useEffect(()=>{
-    window.localStorage.setItem('cart',JSON.stringify(cart));
+    storeCart(JSON.stringify(cart)); 
 },[cart]); //this time we are passing cart in the dependecny array cause we want to monitor the changes in the cart. 
 
     return (
