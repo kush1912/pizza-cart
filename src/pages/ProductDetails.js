@@ -19,9 +19,9 @@ function ProductDetails() {
 
     return (
         <div className="container mx-auto mt-12">
-            <button className="mb-12 font-bold" onClick={()=>{navigate(`/`)}}>Back</button>
+            <button className='py-1 px-4 rounded-full font-bold mt-4 mb-4 bg-yellow-500 hover:bg-yellow-600' onClick={()=>{navigate(`/`)}}>Back</button>
             <div className="flex">
-                <img src={product.image} alt="pizza-details-icon" />
+                <img className="mr-5" src={product.image} alt="pizza-details-icon" />
                 <div>
                     <h1 className="text-xl font-bold">{product.name}</h1>
                     <div className="text-md">{product.size}</div>

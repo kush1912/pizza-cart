@@ -79,19 +79,19 @@ export default function Cart() {
                     products.map(product=>{
                         return (
                             <li className='"mb-12' key={product._id}>
-                                <div className="flex items-center justify-between">
+                                <div className="flex items-center mb-4 justify-between">
                                     <div className="flex items-center">
                                         <img className="h-16" src={product.image} alt="icon"/>
                                         <span className="font-bold ml-4 w-48">{product.name}</span>
                                     </div>
                                     <div>
-                                        <button onClick={()=>{decrement(product._id)}} className="bg-yellow0-500 px-4 py-2 rounded-full leading-none">-</button> 
+                                        <button onClick={()=>{decrement(product._id)}} className="bg-yellow-500 px-4 py-2 rounded-full leading-none text-white">-</button> 
                                         <b className="px-4">{getQty(product._id)}</b>
-                                        <button onClick={()=>{increment(product._id)}} className="bg-yellow0-500 px-4 py-2 rounded-full leading-none">+</button>
+                                        <button onClick={()=>{increment(product._id)}} className="bg-yellow-500 px-4 py-2 rounded-full leading-none text-white">+</button>
                                     </div>
                                     <div>
                                         <span>Rs. {getSum(product._id, product.price)}</span>
-                                        <button onClick={()=>{handleDelete(product._id)}} className="bg-red-500 px-4 py-2 rounded-full leading-none text-white">Delete</button>
+                                        <button onClick={()=>{handleDelete(product._id)}} className="bg-red-500 px-4 py-2 ml-2 mt-2 rounded-full leading-none text-white">Delete</button>
                                     </div>
                                 </div>
                             </li>
