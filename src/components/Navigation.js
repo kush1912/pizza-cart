@@ -2,7 +2,8 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import { useContext } from 'react'
 import { CartContext } from '../pages/CartContext'
-
+import logo from '../assets/logo.png'
+import cartLogo from '../assets/cart.png'
 
 export default function Navigation() {
     const cartStyle={
@@ -18,7 +19,7 @@ export default function Navigation() {
         <>
             <nav className="container mx-auto flex items-center justify-between py-4">
                     <Link to="/">
-                        <img style={{height:45}} src="./../images/logo.png" alt='logo'></img>
+                        <img style={{height:45}} src={logo} alt='logo'></img>
                     </Link>
                 <ul className='flex items-center'>
                     <li><Link to="/">Home</Link></li>
@@ -27,7 +28,7 @@ export default function Navigation() {
                         <Link to="/cart">
                             <div style={cartStyle}>
                                 <span>{cart.totalItems? cart.totalItems:0}</span>
-                                <img className='ml-2' src='./../images/cart.png' alt="cart-logo"></img>
+                                <img className='ml-2' src={cartLogo} alt="cart-logo"></img>
                             </div>
                         </Link>
                     </li>

@@ -1,6 +1,8 @@
 import React from 'react'
 import ProductList from '../components/ProductList'
 
+import pizza from '../assets/pizza.png'
+
 export default function Home() {
     return (
         <>
@@ -12,7 +14,7 @@ export default function Home() {
                         <button className='py-1 px-4 rounded-full text-white font-bold mt-4 bg-yellow-500 hover:bg-yellow-600'>Order Now</button>
                     </div>
                     <div className='w-1/2'>
-                        <img className='w-4/5' src='./images/pizza.png' alt='Pizza-icon'></img>
+                        <img className='w-4/6' src={pizza} alt='Pizza-icon'></img>
                     </div>
                 </div>
             </div>

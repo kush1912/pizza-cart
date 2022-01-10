@@ -1,6 +1,7 @@
 import {useContext, useState, useEffect} from 'react'
 import { CartContext } from './CartContext'
 
+import emptyCart from '../assets/empty-cart.png'
 export default function Cart() {
     let grandTotal=0;
     //Sharing the data through ContextAPI
@@ -69,7 +70,7 @@ export default function Cart() {
     return (
         !products.length ?
         <div>
-            <img className='mx-auto w-1/2 mt-12' src="/images/empty-cart.png" alt="empty-cart" />
+            <img className='mx-auto w-1/2 mt-12' src={emptyCart} alt="empty-cart" />
         </div>
         : 
         <div className="container mx-auto lg:w-1/2 w-full pb-24">
