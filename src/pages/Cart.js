@@ -73,24 +73,24 @@ export default function Cart() {
             <img className='mx-auto w-1/2 mt-12' src={emptyCart} alt="empty-cart" />
         </div>
         : 
-        <div className="container mx-auto lg:w-1/2 w-full pb-24">
+        <div className="container mx-auto my-6 lg:w-1/2 w-full px-4 pb-24">
             <h1>Cart Items</h1>
             <ul>
                 {
                     products.map(product=>{
                         return (
-                            <li className='"mb-12' key={product._id}>
+                            <li className='"mb-12 mt-2' key={product._id}>
                                 <div className="flex items-center mb-4 justify-between">
-                                    <div className="flex items-center">
-                                        <img className="h-16" src={product.image} alt="icon"/>
-                                        <span className="font-bold ml-4 w-48">{product.name}</span>
+                                    <div className="w-1/3 md:w lg:w flex flex-col md:flex-row lg:flex-row md:items-center lg:items-center text-left">
+                                        <img className="h-16 w-16" src={product.image} alt="icon"/>
+                                        <span className="font-bold md:mx-4 lg:mx-4 md:w-48 lg:w-48">{product.name}</span>
                                     </div>
-                                    <div>
+                                    <div className='w-1/3 md:w lg:w flex mt-8 md:mt-0 lg:mt-0 mx-2 md:mx-0 lg:mx-0' >
                                         <button onClick={()=>{decrement(product._id)}} className="bg-yellow-500 px-4 py-2 rounded-full leading-none text-white">-</button> 
                                         <b className="px-4">{getQty(product._id)}</b>
                                         <button onClick={()=>{increment(product._id)}} className="bg-yellow-500 px-4 py-2 rounded-full leading-none text-white">+</button>
                                     </div>
-                                    <div>
+                                    <div className="w-1/3 flex flex-col md:flex-row lg:flex-row items-center">
                                         <span>Rs. {getSum(product._id, product.price)}</span>
                                         <button onClick={()=>{handleDelete(product._id)}} className="bg-red-500 px-4 py-2 ml-2 mt-2 rounded-full leading-none text-white">Delete</button>
                                     </div>
@@ -101,10 +101,10 @@ export default function Cart() {
                 }
                 
                 <hr className="my-6"/>
-                <div className="text-right">
+                <div className="text-center md:text-right lg:text-right">
                     <b>Grand Total</b> Rs. {grandTotal}
                 </div>
-                <div className="text-right mt-6">
+                <div className="text-center md:text-right lg:text-right mt-6">
                     <button onClick={()=>{handleOrderNow()}} className="bg-yellow-500 px-4 py-2 rounded-full leading-none">Order Now</button>
                 </div>
             </ul>

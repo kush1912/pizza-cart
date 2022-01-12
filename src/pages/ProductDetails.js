@@ -1,7 +1,5 @@
 import React from 'react'
-
 import {useState,useEffect} from 'react'
-
 import {useParams,useNavigate } from 'react-router-dom'
 
 function ProductDetails() {
@@ -17,9 +15,9 @@ function ProductDetails() {
     }, [params._id])
 
     return (
-        <div className="container mx-auto mt-12">
+        <div className="container mx-auto px-4 mt-12">
             <button className='py-1 px-4 rounded-full font-bold mt-4 mb-4 bg-yellow-500 hover:bg-yellow-600' onClick={()=>{navigate(`/`)}}>Back</button>
-            <div className="flex">
+            <div className="sm:flex-col mx-auto">
                 <img className="mr-5" src={product.image} alt="pizza-details-icon" />
                 <div>
                     <h1 className="text-xl font-bold">{product.name}</h1>

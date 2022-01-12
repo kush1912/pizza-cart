@@ -17,7 +17,7 @@ export default function Navigation() {
 
     return (     
         <>
-            <nav className="container mx-auto flex items-center justify-between py-4">
+            <nav className="container mx-auto flex items-center justify-between px-4 py-4">
                     <Link to="/">
                         <img style={{height:45}} src={logo} alt='logo'></img>
                     </Link>
