@@ -11,7 +11,8 @@ import { CartContext } from './pages/CartContext'
 import {useState, useEffect } from 'react'
 import ProductList from './components/ProductList'
 import { getCart,storeCart } from './helper'
-
+import Login from './components/auth/Login'
+import Register from './components/auth/Register'
 export default function App() {
 const [cart, setCart] = useState({});
 useEffect(()=>{
@@ -35,6 +36,8 @@ useEffect(()=>{
                         <Route path="/products" exact element={<ProductList/>}></Route>
                         <Route path="/cart" element={<Cart/>}></Route>
                         <Route path="/products/:_id" element={<ProductDetails/>}></Route>
+                        <Route path="/login" element={<Login/>}></Route>
+                        <Route path="/register" element={<Register/>}></Route>
                     </Routes>
                 </CartContext.Provider>
             </Router>
