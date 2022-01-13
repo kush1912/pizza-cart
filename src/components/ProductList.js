@@ -31,7 +31,7 @@ function ProductList() {
 
     return (
         <div className="container mx-auto pb-24 px-5">
-            <h1 className='text-lg fon-bold my-8'>Products</h1>
+            <h1 className='text-lg fon-bold my-8'>All Pizza's</h1>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 my-8 gap-24 align-center'>
                 {
                     productList.map(product => <Product key={product._id} product={product} />)

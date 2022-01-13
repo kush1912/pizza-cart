@@ -85,12 +85,12 @@ export default function Cart() {
                                         <img className="h-16 w-16" src={product.image} alt="icon"/>
                                         <span className="font-bold md:mx-4 lg:mx-4 md:w-48 lg:w-48">{product.name}</span>
                                     </div>
-                                    <div className='w-1/3 md:w lg:w flex mt-8 md:mt-0 lg:mt-0 mx-2 md:mx-0 lg:mx-0' >
+                                    <div className='w-1/3 md:w lg:w flex mx-6 md:mx-0 lg:mx-0' >
                                         <button onClick={()=>{decrement(product._id)}} className="bg-yellow-500 px-4 py-2 rounded-full leading-none text-white">-</button> 
                                         <b className="px-4">{getQty(product._id)}</b>
                                         <button onClick={()=>{increment(product._id)}} className="bg-yellow-500 px-4 py-2 rounded-full leading-none text-white">+</button>
                                     </div>
-                                    <div className="w-1/3 flex flex-col md:flex-row lg:flex-row items-center">
+                                    <div className="w-1/3 flex flex-col pb-8 md:pb-0 lg:pb-0 md:flex-row lg:flex-row items-center">
                                         <span>Rs. {getSum(product._id, product.price)}</span>
                                         <button onClick={()=>{handleDelete(product._id)}} className="bg-red-500 px-4 py-2 ml-2 mt-2 rounded-full leading-none text-white">Delete</button>
                                     </div>
