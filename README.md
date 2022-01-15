@@ -1,8 +1,9 @@
 # pizza-cart
-A  react app The Pizza Pro for Pizza Ordering System
+A fully responsive The Pizza Pro application for online Pizza Ordering System.
 
 #### Live: https://the-pizza-pro.herokuapp.com/
 
+Please find the screenshots of different screens below.
 
 |Desktop View|Mobile View|
 |:---:|:---:|
