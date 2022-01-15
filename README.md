@@ -1,5 +1,11 @@
 # pizza-cart
 A fully responsive The Pizza Pro application for online Pizza Ordering System.
+Features:
++ Add items to Cart from details and Main page
++ Increase/Decrease the item qty (decreement will not go below 0)
++ Delete the item from Cart
+- Login and Register Feature coming...
+- Stripe Payment Feature Coming soon...
 
 #### Live: https://the-pizza-pro.herokuapp.com/
 
