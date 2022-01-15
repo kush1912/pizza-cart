@@ -1,6 +1,7 @@
 # pizza-cart
 A fully responsive The Pizza Pro application for online Pizza Ordering System.
-Features:
+
+##### Features:
 + Add items to Cart from details and Main page
 + Increase/Decrease the item qty (decreement will not go below 0)
 + Delete the item from Cart
