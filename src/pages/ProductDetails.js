@@ -2,6 +2,8 @@ import React from 'react'
 import {useContext, useState,useEffect} from 'react'
 import {useParams,useNavigate } from 'react-router-dom'
 import { CartContext } from '../pages/CartContext'
+import peproni from '../assets/peproni.png'
+import productItems, { data } from '../assets/data'
 
 function ProductDetails() {
 
@@ -9,12 +11,13 @@ function ProductDetails() {
     const {cart, setCart} = useContext(CartContext)
     const [product, setProduct]=useState({});
     const params = useParams();
-    //console.log(params);
+    console.log(params);
     const navigate = useNavigate();
     useEffect(() => {
-        fetch(`/api/products/${params._id}`)
-        .then(response=> response.json())
-        .then(product=>setProduct(product))
+        // fetch(`/api/products/${params._id}`)
+        // .then(response=> response.json())
+        // .then(product=>setProduct(product))
+        setProduct(productItems.productItems.find((productItem)=>productItem._id==params._id))
     }, [params._id])
 
     const addToCartFromDetails = (event,product) =>{
@@ -45,7 +48,8 @@ function ProductDetails() {
         <div className="container mx-auto px-4 mt-12">
             <button className='py-1 px-4 rounded-full font-bold mt-4 mb-4 bg-yellow-500 hover:bg-yellow-600' onClick={()=>{navigate(`/`)}}>Back</button>
             <div className="sm:flex-col mx-auto">
-                <img className="mr-5" src={product.image} alt="pizza-details-icon" />
+                {/* <img className="mr-5" src={product.image} alt="pizza-details-icon" /> */}
+                <img className="mr-5" src={peproni} alt="pizza-details-icon" />
                 <div>
                     <h1 className="text-xl font-bold">{product.name}</h1>
                     <div className="text-md">{product.size}</div>

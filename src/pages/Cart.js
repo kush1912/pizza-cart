@@ -1,6 +1,8 @@
 import {useContext, useState, useEffect} from 'react'
 import { CartContext } from './CartContext'
+import { productItems } from '../assets/data';
 
+import peproni from '../assets/peproni.png'
 import emptyCart from '../assets/empty-cart.png'
 export default function Cart() {
     let grandTotal=0;
@@ -13,20 +15,32 @@ export default function Cart() {
     useEffect(() => {
        if(!cart.items) return;
        if(priceFetched) return;
-       fetch('/api/products/cart-items',{
-           method:'POST',
-           headers:{
-               'content-Type':'application/json'
-           },
-           body:JSON.stringify({ids:Object.keys(cart.items)})
-       }).then(res=>res.json())
-       .then(products=> {
-            setProducts(products);
-            togglePriceFetched(true);
-        });  
+    //    fetch('./db.json',{
+    //        method:'POST',
+    //        headers:{
+    //            'content-Type':'application/json'
+    //        },
+    //        body:JSON.stringify({ids:Object.keys(cart.items)})
+    //    }).then(res=>res.json())
+    //    .then(products=> {
+    //         setProducts(products);
+    //         togglePriceFetched(true);
+    //     }); 
+    console.log(cart.items);
+    var res=[];
+    for(var item in cart.items)
+    {
+        // console.log(item);
+        // console.log(cart.items[item]);
+        res.push(productItems.find((productItem)=>productItem._id==item));
+    }
+    console.log(res);
+    setProducts(res);
+    togglePriceFetched(true);
     }, [cart,priceFetched])
 
     const  getQty =(productId)=>{
+        console.log(productId);
         return cart.items[productId];
     }
 
@@ -82,7 +96,8 @@ export default function Cart() {
                             <li className='"mb-12 mt-2' key={product._id}>
                                 <div className="flex items-center mb-4 justify-between">
                                     <div className="w-1/3 md:w lg:w flex flex-col md:flex-row lg:flex-row md:items-center lg:items-center text-left">
-                                        <img className="h-16 w-16" src={product.image} alt="icon"/>
+                                        {/* <img className="h-16 w-16" src={product.image} alt="icon"/> */}
+                                        <img className="h-16 w-16" src={peproni} alt="icon"/>
                                         <span className="font-bold md:mx-4 lg:mx-4 md:w-48 lg:w-48">{product.name}</span>
                                     </div>
                                     <div className='w-1/3 md:w lg:w flex mx-6 md:mx-0 lg:mx-0' >

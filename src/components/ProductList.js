@@ -1,5 +1,6 @@
 import React from 'react'
 import Product from './Product'
+import productItems, { data } from '../assets/data'
 
 //Importing Hooks
 import {useState, useEffect} from 'react';
@@ -21,13 +22,30 @@ function ProductList() {
     if the dependency array is empty it only runs once.
      */
     
+/*
+const fetchJson = () => {
+  fetch('./data.json')
+  .then(response => {
+    return response.json();
+  }).then(data => {
+    setData(data);
+  }).catch((e: Error) => {
+    console.log(e.message);
+  });
+}
+*/
+
     useEffect(()=>{
-        fetch('/api/products')  // fetch return a promise
-        .then(response => response.json())     //response is received in the form of stream which needs to be convertedinto Json Onjects, which also returns a promise
-        .then(allProducts => {
-            setProductList(allProducts); 
-        });
-    }, []);
+        // fetch('./db.json')  // fetch return a promise
+        // .then(response => response.json())     //response is received in the form of stream which needs to be convertedinto Json Onjects, which also returns a promise
+        // .then(allProducts => {
+            // console.log(allProducts);
+            // setProductList(allProducts); 
+            setProductList(productItems.productItems); 
+        // })
+        // .catch(e=>console.error(e.message));
+    }
+    , []);
 
     return (
         <div className="container mx-auto pb-24 px-5">

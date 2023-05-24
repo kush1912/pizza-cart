@@ -2,7 +2,7 @@ import React  from 'react'
 import { useContext, useState } from 'react'
 import {Link } from 'react-router-dom'
 import { CartContext } from '../pages/CartContext'
-
+import peproni from '../assets/peproni.png'
 function Product( props) {
 
     const [isAdding,setIsAdding] = useState(false); 
@@ -51,7 +51,8 @@ function Product( props) {
     return (
         <Link to={`/products/${props.product._id}`}>
             <div className='w-5/6 mx-auto'>
-                <img className='h-50' src={props.product.image} alt="pizza-type-icon" />
+                {/* <img className='h-50' src={props.product.image} alt="pizza-type-icon" /> */}
+                <img className='h-50' src={peproni} alt="pizza-type-icon" />
                 <div className='text-center'>
                     <h2 className='text-lg font-bold py-2'>{props.product.name}</h2>
                     <span className='bg-gray-200 py-1 rounded-full text-sm px-4'>{props.product.size}</span>
