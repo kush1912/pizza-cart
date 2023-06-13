@@ -3,7 +3,7 @@ import {useContext, useState,useEffect} from 'react'
 import {useParams,useNavigate } from 'react-router-dom'
 import { CartContext } from '../pages/CartContext'
 import peproni from '../assets/peproni.png'
-import productItems, { data } from '../assets/data'
+import productItems from '../assets/data'
 
 function ProductDetails() {
 
@@ -17,7 +17,7 @@ function ProductDetails() {
         // fetch(`/api/products/${params._id}`)
         // .then(response=> response.json())
         // .then(product=>setProduct(product))
-        setProduct(productItems.productItems.find((productItem)=>productItem._id==params._id))
+        setProduct(productItems.productItems.find((productItem)=>productItem._id===params._id))
     }, [params._id])
 
     const addToCartFromDetails = (event,product) =>{

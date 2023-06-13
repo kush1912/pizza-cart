@@ -1,6 +1,6 @@
 import React from 'react'
 import Product from './Product'
-import productItems, { data } from '../assets/data'
+import productItems  from '../assets/data'
 
 //Importing Hooks
 import {useState, useEffect} from 'react';
