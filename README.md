@@ -16,7 +16,7 @@ Please find the screenshots of different screens below.
 
 |Desktop View|Mobile View|
 |:---:|:---:|
-|<img src=![main-view-mobile](https://github.com/kush1912/pizza-cart/assets/36148381/287c661f-b9ee-4618-a798-8de9ef45ff8c) width="600" height="450">|<img src="https://github.com/kush1912/pizza-cart/blob/main/git-data/main-view-mobile.jpeg" width="300" height="450">|
+|<img src=https://github.com/kush1912/pizza-cart/assets/36148381/287c661f-b9ee-4618-a798-8de9ef45ff8c width="600" height="450">|<img src="https://github.com/kush1912/pizza-cart/blob/main/git-data/main-view-mobile.jpeg" width="300" height="450">|
 |<img src="https://github.com/kush1912/pizza-cart/blob/main/git-data/details-view-desktop.JPG" width="600" height="450">|<img src="https://github.com/kush1912/pizza-cart/blob/main/git-data/detail-view-mobile.jpeg" width="300" height="450">|
 |<img src="https://github.com/kush1912/pizza-cart/blob/main/git-data/cart-view-desktop.JPG" width="600" height="450">|<img src="https://github.com/kush1912/pizza-cart/blob/main/git-data/cart-view-mobile.jpeg" width="300" height="450">|
 |<img src="https://github.com/kush1912/pizza-cart/blob/main/git-data/empty-cart-desktop.JPG" width="600" height="450">|<img src="https://github.com/kush1912/pizza-cart/blob/main/git-data/empty-cart-mobile.jpeg" width="300" height="450">|
