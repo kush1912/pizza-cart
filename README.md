@@ -12,6 +12,20 @@ A fully responsive The Pizza Pro application for online Pizza Ordering System.
 
 
 
+Please find the screenshots of different screens below.
+
+|Desktop View|Mobile View|
+|:---:|:---:|
+|<img src=![main-view-mobile](https://github.com/kush1912/pizza-cart/assets/36148381/287c661f-b9ee-4618-a798-8de9ef45ff8c) width="600" height="450">|<img src="https://github.com/kush1912/pizza-cart/blob/main/git-data/main-view-mobile.jpeg" width="300" height="450">|
+|<img src="https://github.com/kush1912/pizza-cart/blob/main/git-data/details-view-desktop.JPG" width="600" height="450">|<img src="https://github.com/kush1912/pizza-cart/blob/main/git-data/detail-view-mobile.jpeg" width="300" height="450">|
+|<img src="https://github.com/kush1912/pizza-cart/blob/main/git-data/cart-view-desktop.JPG" width="600" height="450">|<img src="https://github.com/kush1912/pizza-cart/blob/main/git-data/cart-view-mobile.jpeg" width="300" height="450">|
+|<img src="https://github.com/kush1912/pizza-cart/blob/main/git-data/empty-cart-desktop.JPG" width="600" height="450">|<img src="https://github.com/kush1912/pizza-cart/blob/main/git-data/empty-cart-mobile.jpeg" width="300" height="450">|
+|<img src="https://github.com/kush1912/pizza-cart/blob/main/git-data/order-placed-desktop.JPG" width="600" height="450">|<img src="https://github.com/kush1912/pizza-cart/blob/main/git-data/order-placed-mobile.jpeg" width="300" height="450">|
+
+
+
+
+
 ![order-placed-mobile](https://github.com/kush1912/pizza-cart/assets/36148381/11dd31ed-3733-4ed8-a599-f4ec5160adc3)
 ![order-placed-desktop](https://github.com/kush1912/pizza-cart/assets/36148381/643206b3-dc37-4382-873d-d1f2c8fa2e3c)
 ![main-view-desktop](https://github.com/kush1912/pizza-cart/assets/36148381/5cc059a7-e441-4e42-96ff-8356f1199143)
@@ -22,16 +36,5 @@ A fully responsive The Pizza Pro application for online Pizza Ordering System.
 ![cart-view-mobile](https://github.com/kush1912/pizza-cart/assets/36148381/9de1752c-8cc2-46b3-82e9-c5639ef5d091)
 
 
+![main-view-mobile](https://github.com/kush1912/pizza-cart/assets/36148381/287c661f-b9ee-4618-a798-8de9ef45ff8c)
 ![cart-view-desktop](https://github.com/kush1912/pizza-cart/assets/36148381/61c10df4-869f-4c2f-98aa-d7f2b013406b)
-
-
-
-Please find the screenshots of different screens below.
-
-|Desktop View|Mobile View|
-|:---:|:---:|
-|<img src="![main-view-mobile](https://github.com/kush1912/pizza-cart/assets/36148381/287c661f-b9ee-4618-a798-8de9ef45ff8c)" width="600" height="450">|<img src="https://github.com/kush1912/pizza-cart/blob/main/git-data/main-view-mobile.jpeg" width="300" height="450">|
-|<img src="https://github.com/kush1912/pizza-cart/blob/main/git-data/details-view-desktop.JPG" width="600" height="450">|<img src="https://github.com/kush1912/pizza-cart/blob/main/git-data/detail-view-mobile.jpeg" width="300" height="450">|
-|<img src="https://github.com/kush1912/pizza-cart/blob/main/git-data/cart-view-desktop.JPG" width="600" height="450">|<img src="https://github.com/kush1912/pizza-cart/blob/main/git-data/cart-view-mobile.jpeg" width="300" height="450">|
-|<img src="https://github.com/kush1912/pizza-cart/blob/main/git-data/empty-cart-desktop.JPG" width="600" height="450">|<img src="https://github.com/kush1912/pizza-cart/blob/main/git-data/empty-cart-mobile.jpeg" width="300" height="450">|
-|<img src="https://github.com/kush1912/pizza-cart/blob/main/git-data/order-placed-desktop.JPG" width="600" height="450">|<img src="https://github.com/kush1912/pizza-cart/blob/main/git-data/order-placed-mobile.jpeg" width="300" height="450">|
