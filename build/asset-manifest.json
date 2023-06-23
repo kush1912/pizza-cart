@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/static/js/main.8f97f4e0.js",
-    "static/media/pizza.png": "/static/media/pizza.80b3d1dbd8a2c9f0567b.png",
-    "static/media/empty-cart.png": "/static/media/empty-cart.621445dd735630479079.png",
-    "static/media/peproni.png": "/static/media/peproni.ba8aa0b4545f746a3001.png",
-    "index.html": "/index.html",
-    "main.8f97f4e0.js.map": "/static/js/main.8f97f4e0.js.map"
+    "main.js": "/pizza-cart/static/js/main.a5ee0f48.js",
+    "static/media/pizza.png": "/pizza-cart/static/media/pizza.80b3d1dbd8a2c9f0567b.png",
+    "static/media/empty-cart.png": "/pizza-cart/static/media/empty-cart.621445dd735630479079.png",
+    "static/media/peproni.png": "/pizza-cart/static/media/peproni.ba8aa0b4545f746a3001.png",
+    "index.html": "/pizza-cart/index.html",
+    "main.a5ee0f48.js.map": "/pizza-cart/static/js/main.a5ee0f48.js.map"
   },
   "entrypoints": [
-    "static/js/main.8f97f4e0.js"
+    "static/js/main.a5ee0f48.js"
   ]
 }
