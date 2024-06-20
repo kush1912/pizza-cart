@@ -21,8 +21,10 @@ export default function Navigation() {
                     <Link to="/">
                         <img style={{height:45}} src={logo} alt='logo'></img>
                     </Link>
-                <ul className='flex items-center'>
-                    <li><Link to="/">Home</Link></li>
+                <ul className='flex items-center justify-between px-4 py-4'>
+                    <li className='ml-6'><Link to="/">Home</Link></li>
+                    <li className='ml-6'><Link to="/register">Register</Link></li>
+                    <li className='ml-6'><Link to="/login">Login</Link></li>
                     <li className='ml-6'><Link to="/products">Products</Link></li>
                     <li className='ml-6'>
                         <Link to="/cart">
