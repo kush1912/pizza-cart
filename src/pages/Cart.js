@@ -28,8 +28,7 @@ export default function Cart() {
     //     }); 
     // console.log(cart.items);
     var res=[];
-    var item;
-    for( item in cart.items)
+    for(let item in cart.items)
     {
         console.log(item);
         // console.log(cart.items[item]);
