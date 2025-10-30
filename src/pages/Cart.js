@@ -33,7 +33,7 @@ export default function Cart() {
     {
         console.log(item);
         // console.log(cart.items[item]);
-        res.push(productItems.find((productItem,item)=>productItem._id===item));
+        res.push(productItems.find((productItem)=>productItem._id===item));
     }
     // console.log(res);
     setProducts(res);
